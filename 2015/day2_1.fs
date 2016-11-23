@@ -1,0 +1,1 @@
+printfn "Advent of code 2015. Day 2, problem 1"
