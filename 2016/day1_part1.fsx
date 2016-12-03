@@ -1,7 +1,7 @@
 open System
 
 printfn "Advent of code 2016. Day 1 problem 1"
-printfn "http://adventofcode.com/2015/day/2"
+printfn "http://adventofcode.com/2016/day/1"
 
 // Distance between two points (p1, q1) and (p2, q2 ) in a plane is;
 // |p1 - p2| + |q1 - q2| 
