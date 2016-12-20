@@ -10,22 +10,11 @@ let parse (input : string) =
   input.Split([|' '|], StringSplitOptions.RemoveEmptyEntries)
   |> Array.map System.Int32.Parse
 
-  // split by " "
-  // get list of f
+let is_triangle [|a; b; c|] =
+  if( (a+b) > c && (a+c) > b && (b+c) > a ) then 1
+  else 0
 
-let is_triangle [|a, b, c|] =
-  printfn "%d %d %d" a b c
-
-is_triangle [|1, 2, 3|]
-//   procedure
-//   |> Seq.toList
-//   |> List.fold bathroom_procedure button
-
-input_example_1
+input
 |> Array.map parse
-|> Array.map is_triangle
-//|> Array.tail
-// Seq.where 
-
-// http://stackoverflow.com/questions/20825237/converting-a-list-of-strings-into-floats-ints-in-f
-// https://www.dotnetperls.com/convert-fs
+|> Array.map is_triangle 
+|> Array.sum
